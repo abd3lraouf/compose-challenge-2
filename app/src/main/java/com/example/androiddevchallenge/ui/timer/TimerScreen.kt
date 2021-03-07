@@ -143,7 +143,7 @@ fun TimerScreen() {
                                     elapsedTime += 1
                                     delay(1000)
                                 }
-                                while (elapsedTime > 0 ) {
+                                while (elapsedTime > 0) {
                                     ensureActive()
                                     elapsedTime -= 1
                                     delay(100)
