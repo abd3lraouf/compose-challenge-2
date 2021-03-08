@@ -61,8 +61,8 @@ fun TimerScreen() {
     ) {
         val timerTextScale = remember { Animatable(1f) }
 
-        var minutes by remember { mutableStateOf(0) }
-        var seconds by remember { mutableStateOf(20) }
+        var minutes by remember { mutableStateOf(1) }
+        var seconds by remember { mutableStateOf(40) }
 
         var running by remember { mutableStateOf(false) }
 
@@ -141,12 +141,12 @@ fun TimerScreen() {
                                 while (elapsedTime < totalTime) {
                                     ensureActive()
                                     elapsedTime += 1
-                                    delay(1000)
+                                    delay(100)
                                 }
                                 while (elapsedTime > 0) {
                                     ensureActive()
                                     elapsedTime -= 1
-                                    delay(100)
+                                    delay(10)
                                 }
                                 elapsedTime = 0
                                 running = false
